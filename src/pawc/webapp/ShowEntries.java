@@ -10,20 +10,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class Hello
- */
 @WebServlet("/ShowEntries")
 public class ShowEntries extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static PrintWriter out = null;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
     public ShowEntries() {
         super();
-        // TODO Auto-generated constructor stub
     }
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -54,22 +47,11 @@ public class ShowEntries extends HttpServlet {
         
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
-	    processRequest(request, response);
+		processRequest(request, response);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//doGet(request, response);
-	    //processRequest(request, response);
 	}
 	
 	protected String printRow(String author, String message){
